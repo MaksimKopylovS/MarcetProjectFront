@@ -27,7 +27,6 @@ export class StoreItemComponent implements OnInit {
   ngOnInit() {
     this.fileService.downloadFile2(this.item.id).subscribe(
       res => {
-        console.log(res);
         this.retrieveResponse = res;
         this.base64Data = this.retrieveResponse.imageByte;
         this.image = 'data:image/jpeg;base64,' + this.base64Data;
