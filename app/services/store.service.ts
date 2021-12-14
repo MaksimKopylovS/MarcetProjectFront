@@ -24,12 +24,10 @@ export class StoreService {
     let params = new HttpParams().set('page', pageNum)
     if (pageSize) params = params.set('pageSize', pageSize)
     if (categoryId) params = params.set('id_category', categoryId)
-    console.log(pageNum + " " + pageSize + " " + categoryId + " ");
     this.httpClient.get(PRODUCTS_URL + '/get-all', {params: params})
       .subscribe(
         items => {
           this.productsSubject.next(items)
-          console.log(items)
         }
       )
   }

@@ -24,7 +24,6 @@ export class FileSaverService {
 
   downloadFile(fileId?: ProductModel): Observable<ImageModel> {
     let httpParams = new HttpParams()
-    console.log("ngOnInit QQQQQQQQQQQQ Test");
     return this.httpClient.put<ImageModel>(GET_IMAGE_URL, fileId, {
       params: httpParams
     })
@@ -32,7 +31,6 @@ export class FileSaverService {
 
   downloadFile2(id?: number) {
     let httpParams = new HttpParams()
-    console.log("ngOnInit QQQQQQQQQQQQ Test");
     return this.httpClient.get(GET_IMAGE_URL + "/" + id, {
       params: httpParams
     })
@@ -61,7 +59,6 @@ export class FileSaverService {
 
   editProduct(product: ProductModel, formData: FormData): Observable<HttpEvent<string[]>> {
     let httpParams = new HttpParams();
-    console.log(product.title + " ПришлоООоОоООООо")
     formData.append("product", JSON.stringify(product))
     return this.httpClient.post<string[]>(IMAGE_URL + '/edit', formData, {
       reportProgress: true,
