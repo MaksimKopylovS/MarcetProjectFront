@@ -31,12 +31,10 @@ export class LoginComponent implements OnInit {
     this.authService.login(formValues.userName, formValues.password)
       .subscribe(
         ok => {
-          console.log(ok)
           this.notificationService.showSuccess("Успешный вход")
           this.activeModal.close()
         },
         err => {
-          console.error(err)
           this.notificationService.showFailure("Не удалось войти")
         }
       )

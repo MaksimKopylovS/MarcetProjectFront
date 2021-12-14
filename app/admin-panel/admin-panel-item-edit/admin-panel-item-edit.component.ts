@@ -113,7 +113,6 @@ export class AdminPanelItemEditComponent implements OnInit {
         }
       )
     } else {
-      // this.adminPanelService.createItem(this.formtData)
       this.fileSaver.uploadT(model, this.formData).subscribe(
         event => {
           httpResponse = event

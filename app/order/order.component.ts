@@ -17,9 +17,7 @@ export class OrderComponent implements OnInit {
     this.orderService.getItems
     this.orderService.order.subscribe(
       items => {
-        console.log(items)
         this.items = items
-        console.log(this.items.length)
       }
     )
   }

@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {AuthService} from "src/app/services/auth.service";
 
-const ADMIN_ITEMS = '/zuul/service/admin'
+const ADMIN_ITEMS = '/api/admin'
 
 @Component({
   selector: "header-panel",

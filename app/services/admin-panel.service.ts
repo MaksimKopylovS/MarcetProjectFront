@@ -76,8 +76,6 @@ export class AdminPanelService {
   }
 
   createItem(formData: FormData): Observable<string[]> {
-    console.log("CreateItem")
-    console.log(formData)
     return this.httpClient.post<string[]>(ADMIN_ITEMS + '/create', formData, {'headers': HTTP_HEADERS});
   }
 }

@@ -6,5 +6,4 @@ export interface UserDtoModel {
     addressDTOList: AddressModel[],
     jwtResponse?: JwtResponseModel,
     userDTO?: UserModel,
-
 }

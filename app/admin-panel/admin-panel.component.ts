@@ -21,7 +21,6 @@ export class AdminPanelComponent implements OnInit {
     this.service.getItemsSubject();
     this.service.products.subscribe(items => {
       this.items = items.content
-      console.log(this.items)
       this.totalElems = items.totalElements
     })
     this.onPageChange(this.pageNum)

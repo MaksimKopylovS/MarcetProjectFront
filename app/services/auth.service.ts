@@ -57,7 +57,6 @@ export class AuthService {
       {username, password},
       {'headers': HTTP_HEADERS}
     ).pipe(map(user => {
-      console.log(user)
       localStorage.setItem('user', JSON.stringify(user));
 
       this.userSubject.next(user);

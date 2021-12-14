@@ -18,7 +18,6 @@ export class OrderItemComponent implements OnInit {
   ngOnInit(): void {
     this.orderService.getOrder(this.item.order_id).subscribe((data: any) => {
       this.productModel = data.productDTO;
-      console.log(this.productModel)
     })
   }
 
