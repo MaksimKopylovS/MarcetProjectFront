@@ -47,9 +47,7 @@ export class AdminPanelItemEditComponent implements OnInit {
         }
       }
     )
-    console.log(this.textInput)
     this.textInput = undefined
-    console.log(this.textInput)
     //Сброс значение файла input на исходные параметры
     files.currentTarget.value = ''
     // location.reload() перезагрузка страницы
@@ -75,7 +73,6 @@ export class AdminPanelItemEditComponent implements OnInit {
     });
 
     if (this.id) {
-      console.log(this.id + " QQQQQQQQQQQQQ")
       this.adminPanelService.getItem(this.id)
         .pipe(first())
         .subscribe(item => {
@@ -103,8 +100,6 @@ export class AdminPanelItemEditComponent implements OnInit {
     }
     let httpResponse: HttpEvent<string[]> = new HttpResponse()
     if (this.item?.id) {
-      console.log(model + " ururur")
-      console.log(this.formData);
       this.fileSaver.editProduct(model, this.formData).subscribe(
         event => {
           httpResponse = event
